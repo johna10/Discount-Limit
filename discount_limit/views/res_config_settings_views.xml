@@ -19,9 +19,14 @@
                    <field name="is_discount_limit"/>
                    <div class="content-group"
                         invisible="not is_discount_limit">
-                       <div class="mt16">
-                           <label for="discount_limit"/>
-                           <field name="discount_limit"/>
+                        <field name="discount_type" widget="radio" options='{"horizontal": 1}' />
+                       <div class="mt16" invisible="discount_type == 'percentage'">
+                           <label for="discount_fixed_limit"/>
+                           <field name="discount_fixed_limit"/>
+                       </div>
+                       <div class="mt16" invisible="discount_type == 'fixed'">
+                           <label for="discount_percentage_limit"/>
+                           <field name="discount_percentage_limit"/>
                        </div>
                    </div>
                </setting>
