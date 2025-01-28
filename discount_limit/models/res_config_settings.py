@@ -23,10 +23,8 @@ class ResConfigSettings(models.TransientModel):
     @api.onchange('discount_type')
     def _onchange_discount_type(self):
         if self.discount_type == 'fixed':
-            self.discount_fixed_limit = 10
-            self.discount_percentage_limit =0
+            self.discount_percentage_limit = 0
         else:
             self.discount_fixed_limit = 0
-            self.discount_percentage_limit = 10
 
 

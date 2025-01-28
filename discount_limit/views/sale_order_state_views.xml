@@ -9,7 +9,7 @@
              <header>
                  <button name="action_approval" type="object"
                             string="Approval" class="oe_highlight" invisible="state != 'approval'"
-                            groups="purchase.group_purchase_manager"/>
+                            />
                  <button name="check_discount_limit" type="object"
                             string="Test" class="oe_highlight"/>
 <!--                 <button name="action_approval" type="object"-->
